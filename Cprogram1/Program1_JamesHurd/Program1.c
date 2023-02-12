@@ -65,7 +65,7 @@ printf("%-10s\t$%.2f\t(%s)\n", "Maximum sales:", max, *(months + month));
 
 } //1}}}
 
-float print_avg(const float *data) { //{{{1
+void print_avg(const float *data) { //{{{1
 
 float sum = 0;
 
@@ -77,6 +77,7 @@ printf("%-10s\t$%.2f\n", "Average sales:", sum/12);
 
 void print_summary(const float *data) { //{{{1
 
+printf("Sales Summary:\n");
 print_min(data);
 print_max(data);
 print_avg(data);
@@ -96,7 +97,7 @@ for (int i=0; i<=6; ++i) {
 } //1}}}
 
 void print_sorted_sales(const float *data) { //{{{1
-printf("Sales Report (Highest to Lowest):\n%-10s\tSales\n","Month");
+printf("Sales Report (Highest to Lowest):\n%-10s\t  Sales\n","  Month");
 
 //indices of both arrays.
 int indices[12] = {0,1,2,3,4,5,6,7,8,9,10,11};
